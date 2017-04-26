@@ -1,3 +1,44 @@
 page-home {
 
+  // Page Styling
+  // ----------------------------------------------------------------------------------
+  .scroll-content {
+    background-color: $grey;
+  }
+
+
+  // Category Page
+  // ----------------------------------------------------------------------------------
+  .image__padding {
+    padding: 50px;
+  }
+  .padding_helper {
+    margin: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: $white;
+  }
+  .category__image {
+    background-image: url('../assets/img/backgrounds/img1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+  }
+  .section__headline {
+    font-size: 1.5rem;
+    font-weight: $bold;
+    letter-spacing: .8px;
+    margin: 0;
+    text-transform: uppercase;
+    color: $grey;
+  }
+  .category__headline {
+    font-size: 2.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $white;
+    line-height: 1.1;
+    margin: 5px;
+  }
+
 }

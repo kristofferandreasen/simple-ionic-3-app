@@ -44,19 +44,16 @@ $smallpadding: 10px 0 10px 0;
 // colors so you can add, rename and remove colors as needed.
 // The "primary" color is the only required color in the map.
 
-$colors: (
-  primary:      #000,
-  light-grey:   #f8f8f8,
-  grey:         #e3e3e3,
-  white:        #fff,
-  yellow:       #ffd148,
-  blue:         #4155b4,
-  light-black:  #424242,
-  black:        #000,
-  red:          #8a0000,
-  purple:       #5b507a
-);
-
+$primary:      #000;
+$light-grey:   #f8f8f8;
+$grey:         #e3e3e3;
+$white:        #fff;
+$yellow:       #ffd148;
+$blue:         #4155b4;
+$light-black:  #424242;
+$black:        #000;
+$red:          #8a0000;
+$purple:       #5b507a;
 
 // App iOS Variables
 // --------------------------------------------------
