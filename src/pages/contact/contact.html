@@ -8,10 +8,9 @@
 
 <ion-content>
   <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
+    <ion-item *ngFor="let item of items" (click)="itemTapped()">
       <ion-icon name="ionic" item-left></ion-icon>
-      @ionicframework
+      {{ item.title }}
     </ion-item>
   </ion-list>
 </ion-content>

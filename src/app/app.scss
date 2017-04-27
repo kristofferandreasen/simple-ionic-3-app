@@ -25,3 +25,82 @@
 .text-center {
     text-align: center;
 }
+
+// Page Styling
+// ----------------------------------------------------------------------------------
+.scroll-content {
+  background-color: $grey;
+}
+
+
+// Buttons
+// ----------------------------------------------------------------------------------
+a {
+  text-decoration: none;
+}
+.btn__line__large__white {
+    font-size: 14px;
+    font-weight: $bold;
+    line-height: 1;
+    border-radius: 500px;
+    padding: 18px 48px 16px;
+    transition-property: background-color,border-color,color,box-shadow,filter;
+    transition-duration: .3s;
+    border-width: 0;
+    letter-spacing: 2px;
+    min-width: 160px;
+    text-transform: uppercase;
+    white-space: normal;
+    color: $white;
+    box-shadow: 0 0 0 2px #fff inset;
+    background-color: transparent;
+}
+.btn__line__small__white {
+    font-size: 13px;
+    font-weight: $bold;
+    line-height: 1;
+    border-radius: 500px;
+    padding: 12px 30px 12px;
+    transition-property: background-color,border-color,color,box-shadow,filter;
+    transition-duration: .3s;
+    border-width: 0;
+    letter-spacing: 2px;
+    min-width: 100px;
+    text-transform: uppercase;
+    white-space: normal;
+    color: $white;
+    box-shadow: 0 0 0 2px #fff inset;
+    background-color: transparent;
+}
+.btn__line__square__white {
+    font-size: 13px;
+    font-weight: $bold;
+    line-height: 1;
+    border-radius: 5px;
+    padding: 10px 20px 10px;
+    transition-property: background-color,border-color,color,box-shadow,filter;
+    transition-duration: .3s;
+    border-width: 0;
+    letter-spacing: 1px;
+    min-width: 100px;
+    text-transform: uppercase;
+    white-space: normal;
+    color: $white;
+    box-shadow: 0 0 0 2px #fff inset;
+    background-color: transparent;
+}
+.btn__solid__blue {
+    border: 0;
+    border-radius: 4px;
+    padding: 10px 20px 10px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: $medium;
+    letter-spacing: 1px;
+    background-color: $blue;
+    color: $white;
+    text-shadow: none;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
