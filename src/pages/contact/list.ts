@@ -11,13 +11,13 @@ import { ItemApi } from '../../services/service';
 // The component imports the specific parts from the html and scss file.
 // The Http provider is included to make the API call to the service.
 @Component({
-  selector: 'page-contact',
-  templateUrl: 'contact.html',
+  selector: 'page-list',
+  templateUrl: 'list.html',
   providers: [Http]
 })
 
 // The generic export class is created with the page name.
-export class ContactPage {
+export class ListPage {
 
   items: any;
 
