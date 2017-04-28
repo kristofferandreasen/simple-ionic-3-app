@@ -7,10 +7,29 @@
 </ion-header>
 
 <ion-content>
+
+  <!-- Toolbar to wrap search bar -->
+  <ion-toolbar>
+
+    <!-- Searchbar Code -->
+    <ion-searchbar
+      placeholder="Search"
+      (ionInput)="getItems($event)">
+    </ion-searchbar>
+    <!-- End of Searchbar Code -->
+
+  </ion-toolbar>
+  <!-- End of Toolbar -->
+
+
+  <!-- List Code -->
   <ion-list>
-    <ion-item *ngFor="let item of items" (click)="itemTapped()">
+    <ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
       <ion-icon name="ionic" item-left></ion-icon>
       {{ item.title }}
     </ion-item>
   </ion-list>
+  <!-- End of List Code -->
+
+
 </ion-content>

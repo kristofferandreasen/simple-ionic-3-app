@@ -19,6 +19,8 @@ import { ItemApi } from '../../services/service';
 // The generic export class is created with the page name.
 export class ListPage {
 
+  // The search term string is created as a variable
+  // and the items array to populate with data is created
   items: any;
 
   // The navController and the ItemApi Service is injected into the constructor
@@ -35,6 +37,28 @@ export class ListPage {
   ionViewDidLoad() {
     this.itemApi.getItems().then(data => this.items = data);
   }
+
+  // The getItems function is called everytime the searchbar input changes
+  getItems(searchbar) {
+
+  // set q to the value of the searchbar
+  var q = searchbar.srcElement.value;
+
+  // if the value is an empty string don't filter the items
+  if (!q) {
+    this.itemApi.getItems().then(data => this.items = data);
+  }
+
+  this.items = this.items.filter((v) => {
+    if(v.title && q) {
+      if (v.title.toLowerCase().indexOf(q.toLowerCase()) > -1) {
+        return true;
+      }
+      return false;
+    }
+  });
+}
+
 
   // This function is an event to listen to clicks on elements.
   // The SingleItem Page has been included to be passed in this function.

@@ -12,19 +12,16 @@ import { ItemApi } from '../../services/service';
 })
 export class SingleItem {
 
-  items: any;
+  item: any;
 
-  constructor(public navCtrl: NavController, public params:NavParams, private itemApi: ItemApi) {
+  constructor(public navCtrl: NavController, private navParams:NavParams, private itemApi: ItemApi) {
+      this.item = this.navParams.data;
+      console.log(this.item);
   }
 
   // ------------------------------------------------------------------------------------------
   // FUNCTIONS
   // ------------------------------------------------------------------------------------------
 
-  // This is where the data loads from the service.
-  // It happens when the view loads for the first time.
-  ionViewDidLoad() {
-    this.itemApi.getItems().then(data => this.items = data);
-  }
 
 }

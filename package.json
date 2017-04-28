@@ -1,7 +1,7 @@
 {
-  "name": "ionic-hello-world",
-  "version": "0.0.0",
-  "author": "Ionic Framework",
+  "name": "simple-ionic-2-app",
+  "version": "0.0.1",
+  "author": "Kristoffer Andreasen",
   "homepage": "http://ionicframework.com/",
   "private": true,
   "scripts": {
