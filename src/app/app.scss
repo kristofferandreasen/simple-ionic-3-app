@@ -17,8 +17,8 @@
 
 // Adding a title image in all headers
 .title-image {
-    margin-top: 8px;
-    height: 27px;
+    margin-top: 9px;
+    height: 25px;
 }
 
 // Global style to center all text like in Bootstrap
@@ -26,13 +26,103 @@
     text-align: center;
 }
 
+// ----------------------------------------------------------------------------------
 // Page Styling
 // ----------------------------------------------------------------------------------
 .scroll-content {
   background-color: $grey;
 }
 
+// ----------------------------------------------------------------------------------
+// Global back button styling
+// ----------------------------------------------------------------------------------
+.back-button {
+    color: $black !important;//what ever the color you like
+}
 
+// ----------------------------------------------------------------------------------
+// Typography
+// ----------------------------------------------------------------------------------
+
+p {
+  font-size: $base-font-size;
+	line-height: $base-line-height;
+  font-weight: $base-font-weight;
+  letter-spacing: $base-letter-spacing;
+}
+h1 {
+  font-size: 38px;
+	line-height: $headline-line-height;
+  font-weight: $headline-font-weight;
+  letter-spacing: $headline-letter-spacing;
+}
+h2 {
+  font-size: 34px;
+	line-height: $headline-line-height;
+  font-weight: $headline-font-weight;
+  letter-spacing: $headline-letter-spacing;
+}
+h3 {
+  font-size: 30px;
+	line-height: $headline-line-height;
+  font-weight: $headline-font-weight;
+  letter-spacing: $headline-letter-spacing;
+}
+h4 {
+  font-size: 26px;
+	line-height: $headline-line-height;
+  font-weight: $headline-font-weight;
+  letter-spacing: $headline-letter-spacing;
+}
+h5 {
+  font-size: 22px;
+	line-height: $headline-line-height;
+  font-weight: $headline-font-weight;
+  letter-spacing: $headline-letter-spacing;
+}
+h6 {
+  font-size: 20px;
+	line-height: $headline-line-height;
+  font-weight: $headline-font-weight;
+  letter-spacing: $headline-letter-spacing;
+}
+ul li {
+  font-size: $base-font-size;
+	line-height: $base-line-height;
+  font-weight: $base-font-weight;
+  letter-spacing: $base-letter-spacing;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding-left: 1em;
+  text-indent: -.7em;
+}
+
+li::before {
+  content: "• ";
+  color: $black;
+  font-size: 20px;
+}
+@media screen and (max-width: 325px) {
+  p {
+    font-size: 16px;
+  	line-height: $base-line-height;
+    font-weight: $base-font-weight;
+    letter-spacing: $base-letter-spacing;
+  }
+  ul li {
+    font-size: 16px;
+  	line-height: $base-line-height;
+    font-weight: $base-font-weight;
+    letter-spacing: $base-letter-spacing;
+  }
+}
+// ----------------------------------------------------------------------------------
 // Buttons
 // ----------------------------------------------------------------------------------
 a {

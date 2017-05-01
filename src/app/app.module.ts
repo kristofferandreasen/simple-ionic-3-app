@@ -7,7 +7,7 @@ import { MyApp } from './app.component';
 import { HttpModule } from '@angular/http';
 
 // Page imports
-import { AboutPage } from '../pages/about/about';
+import { CategoryPage } from '../pages/category/category';
 import { ListPage } from '../pages/list/list';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
@@ -23,7 +23,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
+    CategoryPage,
     ListPage,
     HomePage,
     SingleItem,
@@ -37,7 +37,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
+    CategoryPage,
     ListPage,
     HomePage,
     SingleItem,

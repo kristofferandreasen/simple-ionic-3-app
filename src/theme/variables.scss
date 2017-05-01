@@ -17,9 +17,15 @@ $font-path: "../assets/fonts";
 // These typography variables is used throughout the app
 // to make the font styling easy to manage from the variables.
 
-// Base fonts
+/* Typograhpy */
 $base-font-size: 18px;
-$base-line-height: 1.5;
+$base-line-height: 1.58;
+$base-font-weight: 400;
+$base-letter-spacing: -.028em;
+
+$headline-line-height: 1.1;
+$headline-font-weight: 700;
+$headline-letter-spacing: 0.028em;
 
 // Font weights
 $light: 300;

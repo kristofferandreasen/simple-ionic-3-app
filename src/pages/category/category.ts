@@ -11,23 +11,28 @@ import { ItemApi } from '../../services/service';
 // The component imports the specific parts from the html and scss file.
 // The Http provider is included to make the API call to the service.
 @Component({
-  selector: 'page-list',
-  templateUrl: 'list.html',
+  selector: 'page-category',
+  templateUrl: 'category.html',
   providers: [Http]
 })
 
-// The generic export class is created with the page name.
-export class ListPage {
+export class CategoryPage {
 
   // The items array to populate with data is created
+  category: any;
   items: any;
+  modifiedData: any;
+  categoryFilter: any;
 
-  // The navController and the ItemApi Service is injected into the constructor
   constructor(
               public navCtrl: NavController,
-              public params:NavParams,
+              private navParams:NavParams,
               private itemApi: ItemApi
-            ) {}
+            )
+            {
+              this.category = this.navParams.data;
+              console.log(this.category);
+            }
 
   // ------------------------------------------------------------------------------------------
   // FUNCTIONS
@@ -36,37 +41,27 @@ export class ListPage {
   // This is where the data loads from the service.
   // It happens when the view loads for the first time.
   ionViewDidLoad() {
-    this.itemApi.getItems().then(data => this.items = data);
+
+    // Get the JSON data from our itemApi
+    this.itemApi.getFilteredItems(this.category).then(data => this.items = data);
     console.log(this.items);
   }
 
-  // The getItems function is called everytime the searchbar input changes
-  getItems(searchbar) {
-
-    // set q to the value of the searchbar
-    var q = searchbar.srcElement.value;
-
-    // if the value is an empty string don't filter the items
-    if (!q) {
-      this.itemApi.getItems().then(data => this.items = data);
-    }
-
-    this.items = this.items.filter((v) => {
-      if(v.title && q) {
-        if (v.title.toLowerCase().indexOf(q.toLowerCase()) > -1) {
-          return true;
-        }
-        return false;
-      }
-    });
+  // This function filters the array to only include items in the specified category
+  filterData() {
+    this.items = this.items.filter(item => item.category == 'Fantasticness')
   }
-  // End of Searchbar Code
 
+  // This works but changes all the categories of the data
+  filterData2($event, categoryName) {
+    this.items = this.items.filter(item => item.category == 'categoryName')
+  }
 
   // This function is an event to listen to clicks on elements.
   // The SingleItem Page has been included to be passed in this function.
   itemTapped($event, item) {
     this.navCtrl.push(SingleItem, item);
   }
+
 
 }

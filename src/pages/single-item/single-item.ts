@@ -14,10 +14,15 @@ export class SingleItem {
 
   item: any;
 
-  constructor(public navCtrl: NavController, private navParams:NavParams, private itemApi: ItemApi) {
-      this.item = this.navParams.data;
-      console.log(this.item);
-  }
+  constructor(
+              public navCtrl: NavController,
+              private navParams:NavParams,
+              private itemApi: ItemApi
+            )
+            {
+              this.item = this.navParams.data;
+              console.log(this.item);
+            }
 
   // ------------------------------------------------------------------------------------------
   // FUNCTIONS

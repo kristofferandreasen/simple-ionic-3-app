@@ -8,21 +8,6 @@
 
 <ion-content>
 
-  <!-- Toolbar to wrap search bar -->
-  <ion-toolbar>
-
-    <!-- Searchbar Code -->
-    <ion-searchbar
-      placeholder="Search"
-      (ionInput)="getItems($event)">
-    </ion-searchbar>
-    <!-- End of Searchbar Code -->
-
-  </ion-toolbar>
-  <!-- End of Toolbar Code -->
-
-
-
   <!-- List Code -->
   <ion-list>
 
@@ -37,7 +22,6 @@
   </ion-list>
   <!-- End of List Code -->
 
-
-
+  <a class="btn__solid__blue" (click)="filterData()">Filter Data</a>
 
 </ion-content>

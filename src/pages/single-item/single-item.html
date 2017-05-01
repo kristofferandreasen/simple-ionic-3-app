@@ -1,14 +1,45 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      <img class="title-image" alt="logo" height="40"   src="assets/img/logo.png" >
+      <img class="title-image" alt="logo" height="40" src="assets/img/logo.png" >
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-    <h1>{{ item.title }}</h1>
-    <p>
-      {{ item.description }}
-    </p>
+<ion-content>
+
+    <!-- Header content with background -->
+    <div class="header text-center">
+
+      <br>
+
+      <!-- Item title -->
+      <h3 class="headline">
+        {{ item.title }}
+      </h3>
+      <!-- End of Item title -->
+
+      <br>
+
+      <!-- Item Category -->
+      <a class="btn__line__square__white">
+        {{ item.category }}
+      </a>
+      <!-- End of Item Category -->
+
+      <br>
+      <br>
+      <br>
+
+    </div>
+    <!-- End of Header Content -->
+
+    <!-- Content Description -->
+    <div class="item__content">
+      <p padding>
+        {{ item.description }}
+      </p>
+    </div>
+    <!-- End of Content Description -->
+
 </ion-content>
