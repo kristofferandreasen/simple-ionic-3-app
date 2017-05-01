@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, LoadingController } from 'ionic-angular';
 import { Http } from '@angular/http';
 
 // Import pages to allow links to the page
@@ -26,7 +26,8 @@ export class ListPage {
   constructor(
               public navCtrl: NavController,
               public params:NavParams,
-              private itemApi: ItemApi
+              private itemApi: ItemApi,
+              public loadingController: LoadingController
             ) {}
 
   // ------------------------------------------------------------------------------------------
@@ -36,8 +37,16 @@ export class ListPage {
   // This is where the data loads from the service.
   // It happens when the view loads for the first time.
   ionViewDidLoad() {
-    this.itemApi.getItems().then(data => this.items = data);
-    console.log(this.items);
+
+    let loader = this.loadingController.create({
+      content: "Getting items.."
+    });
+    loader.present();
+
+    this.itemApi.getItems().then(data => {
+        loader.dismiss();
+        this.items = data
+    });
   }
 
   // The getItems function is called everytime the searchbar input changes
@@ -48,7 +57,18 @@ export class ListPage {
 
     // if the value is an empty string don't filter the items
     if (!q) {
-      this.itemApi.getItems().then(data => this.items = data);
+
+      // Show loader when search is cancelled
+      let loader = this.loadingController.create({
+        content: "Getting items.."
+      });
+      loader.present();
+
+      // fetch the data and dismiss loader
+      this.itemApi.getItems().then(data => {
+        loader.dismiss();
+        this.items = data
+      });
     }
 
     this.items = this.items.filter((v) => {

@@ -35,7 +35,19 @@ export class HomePage {
   // The SingleItem Page has been included to be passed in this function.
   CategoryTapped($event, category) {
     this.navCtrl.push(CategoryPage, {
-        category: "Fantasticness"
+        category: 'Fantasticness'
+    });
+  }
+
+  CategoryTapped_2($event, category) {
+    this.navCtrl.push(CategoryPage, {
+        category: 'Short'
+    });
+  }
+
+  CategoryTapped_3($event, category) {
+    this.navCtrl.push(CategoryPage, {
+        category: 'Booperness'
     });
   }
 

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, LoadingController } from 'ionic-angular';
 import { Http } from '@angular/http';
 
 // Import pages to allow links to the page
@@ -19,19 +19,18 @@ import { ItemApi } from '../../services/service';
 export class CategoryPage {
 
   // The items array to populate with data is created
-  category: any;
   items: any;
-  modifiedData: any;
-  categoryFilter: any;
+  passedCategory: any;
 
   constructor(
               public navCtrl: NavController,
               private navParams:NavParams,
-              private itemApi: ItemApi
+              private itemApi: ItemApi,
+              public loadingController: LoadingController
             )
             {
-              this.category = this.navParams.data;
-              console.log(this.category);
+              //this.category = this.navParams.data;
+              this.passedCategory = this.navParams.get('category');
             }
 
   // ------------------------------------------------------------------------------------------
@@ -42,19 +41,18 @@ export class CategoryPage {
   // It happens when the view loads for the first time.
   ionViewDidLoad() {
 
+    let loader = this.loadingController.create({
+      content: "Getting items.."
+    });
+    loader.present();
+
     // Get the JSON data from our itemApi
-    this.itemApi.getFilteredItems(this.category).then(data => this.items = data);
-    console.log(this.items);
-  }
+    this.itemApi.getItems().then(data => {
+      loader.dismiss();
+      this.items = data;
+      this.items = this.items.filter(item => item.category == this.passedCategory);
+    });
 
-  // This function filters the array to only include items in the specified category
-  filterData() {
-    this.items = this.items.filter(item => item.category == 'Fantasticness')
-  }
-
-  // This works but changes all the categories of the data
-  filterData2($event, categoryName) {
-    this.items = this.items.filter(item => item.category == 'categoryName')
   }
 
   // This function is an event to listen to clicks on elements.
