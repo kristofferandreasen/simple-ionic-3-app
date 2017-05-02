@@ -9,8 +9,8 @@ There is no platform specific styling on any component other than the basic diff
 ## Getting Started
 
 To begin using this template, choose one of the following options to get started:
-* [Download the latest release here](https://github.com/kristofferandreasen/simple-ionic-2-app/archive/master.zip)
-* Clone the repo: `git clone https://github.com/kristofferandreasen/simple-ionic-2-app.git`
+* [Download the latest release here](https://github.com/kristofferandreasen/simple-ionic-3-app/archive/master.zip)
+* Clone the repo: `git clone https://github.com/kristofferandreasen/simple-ionic-3-app.git`
 * Fork the repo
 
 ## Project Structure
