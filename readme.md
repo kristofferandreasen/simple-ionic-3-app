@@ -31,7 +31,7 @@ To begin using this template, choose one of the following options to get started
 ```
 
 ### src directory
-
+```
 .
    ├── ...
    ├── src                       
@@ -45,6 +45,7 @@ To begin using this template, choose one of the following options to get started
    |   ├── manifest.json          # Metadata for the app
    │   └── service-worker.js      # Cache configurations
    └── ...
+```
 
 
 ## Start the project
