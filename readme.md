@@ -2,7 +2,7 @@
 
 This template is the tabs-starter with some additional work. It contains a set of different custom components and a simple http call to a JSON file.
 
-![Ionic 2 Simple App](http://i.imgur.com/c7QHVQ3.gifv)
+!([Imgur](http://i.imgur.com/c7QHVQ3.gifv))
 
 ## Getting Started
 
