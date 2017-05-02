@@ -1,6 +1,8 @@
-# [Ionic 2 Starter Template]
+# Ionic 2 Starter Template
 
 This template is the tabs-starter with some additional work. It contains a set of different custom components and a simple http call to a JSON file.
+
+![Ionic 2 Simple App](http://imgur.com/a/6Tl4w)
 
 ## Getting Started
 
