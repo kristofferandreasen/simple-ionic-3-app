@@ -15,6 +15,7 @@ To begin using this template, choose one of the following options to get started
 
 ## Project Structure
 
+```
 .
  ├── resources                    # Build files on the specific platforms (iOS, Android) and app icon + splash
  ├── src                          # This is where the app lives - *the main folder*
@@ -27,6 +28,7 @@ To begin using this template, choose one of the following options to get started
  ├── readme.md                    # Project description
  ├── tsconfig.json                # TypeScript configurations
  └── tslint.json                  # TypeScript linting options
+```
 
 ### src directory
 
@@ -43,7 +45,7 @@ To begin using this template, choose one of the following options to get started
    |   ├── manifest.json          # Metadata for the app
    │   └── service-worker.js      # Cache configurations
    └── ...
-   
+
 
 ## Start the project
 The project is started with the regular ionic commands.
